@@ -42,27 +42,12 @@
     position:relative;
   }
 
-  .bg-img{
-    position:fixed;
-    inset:-3%;
-    z-index:0;
-    background-image:url('https://images.unsplash.com/photo-1738462578003-39961adc78b7?fm=jpg&q=80&w=2400&auto=format&fit=crop');
-    background-size:cover;
-    background-position:center 38%;
-    background-repeat:no-repeat;
-    animation:bgZoom 40s ease-in-out infinite alternate;
-    filter:saturate(0.82) brightness(1.04);
-  }
-  @keyframes bgZoom{
-    0%{ transform:scale(1.02); background-position:center 34%; }
-    50%{ transform:scale(1.08); background-position:center 42%; }
-    100%{ transform:scale(1.03); background-position:center 30%; }
-  }
+  /* .bg-img: reservado para la foto propia de Karen (pendiente). Cuando la envie,
+     se agrega aqui como background-image con la animacion bgZoom. */
   .bg-photo{
     position:fixed;
     inset:0;
     z-index:0;
-    mix-blend-mode:soft-light;
     background:
       radial-gradient(ellipse 65% 50% at 50% 30%,
         rgba(255,254,252,0.95) 0%,
@@ -579,7 +564,6 @@
 </head>
 <body>
 
-  <div class="bg-img"></div>
   <div class="bg-photo"></div>
   <div class="bg-veil"></div>
 
@@ -659,7 +643,7 @@
       </a>
 
       <!-- 3. Bóveda de recursos -->
-      <a class="card" href="PEGA_AQUI_TU_ENLACE_DE_LA_BOVEDA" target="_blank" rel="noopener">
+      <a class="card" href="boveda.html">
         <div class="card-top">
           <div class="icon-wrap">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="4" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="20"/></svg>
