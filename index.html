@@ -47,18 +47,24 @@
     inset:0;
     z-index:0;
     background:
-      radial-gradient(ellipse 60% 50% at 15% 20%, rgba(246,239,231,0.75) 0%, rgba(255,255,255,0) 70%),
-      radial-gradient(ellipse 55% 45% at 85% 25%, rgba(228,214,198,0.45) 0%, rgba(255,255,255,0) 70%),
-      radial-gradient(ellipse 65% 55% at 50% 95%, rgba(246,239,231,0.65) 0%, rgba(255,255,255,0) 70%),
-      #FFFFFF;
-    background-size:180% 180%, 180% 180%, 180% 180%, auto;
+      radial-gradient(ellipse 60% 48% at 50% 34%,
+        rgba(255,255,255,0.95) 0%,
+        rgba(246,221,210,0.65) 22%,
+        rgba(232,206,186,0.42) 42%,
+        rgba(228,214,198,0.22) 60%,
+        rgba(255,255,255,0) 78%),
+      radial-gradient(ellipse 48% 38% at 16% 14%, rgba(205,222,196,0.38) 0%, rgba(255,255,255,0) 70%),
+      radial-gradient(ellipse 50% 42% at 86% 18%, rgba(246,208,196,0.4) 0%, rgba(255,255,255,0) 70%),
+      radial-gradient(ellipse 72% 46% at 50% 100%, rgba(232,206,186,0.5) 0%, rgba(255,255,255,0) 62%),
+      var(--paper);
+    background-size:200% 200%, 180% 180%, 180% 180%, 180% 180%, auto;
     background-repeat:no-repeat;
     animation:bgFloat 34s ease-in-out infinite alternate;
   }
   @keyframes bgFloat{
-    0%{ background-position: 10% 10%, 90% 15%, 45% 100%; }
-    50%{ background-position: 35% 45%, 65% 55%, 55% 65%; }
-    100%{ background-position: 65% 20%, 35% 80%, 50% 30%; }
+    0%{ background-position: 45% 30%, 10% 10%, 90% 15%, 45% 100%; }
+    50%{ background-position: 55% 40%, 35% 45%, 65% 55%, 55% 65%; }
+    100%{ background-position: 50% 25%, 65% 20%, 35% 80%, 50% 30%; }
   }
   .bg-veil{
     position:fixed;
@@ -66,10 +72,10 @@
     z-index:0;
     background:
       linear-gradient(180deg,
-        rgba(255,255,255,0.1) 0%,
-        rgba(255,255,255,0.02) 30%,
-        rgba(255,255,255,0.02) 70%,
-        rgba(255,255,255,0.22) 100%);
+        rgba(255,255,255,0.08) 0%,
+        rgba(255,255,255,0.02) 28%,
+        rgba(255,255,255,0.02) 68%,
+        rgba(255,255,255,0.24) 100%);
   }
 
   .page{
