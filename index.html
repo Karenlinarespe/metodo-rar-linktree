@@ -42,20 +42,37 @@
     position:relative;
   }
 
+  .bg-img{
+    position:fixed;
+    inset:-3%;
+    z-index:0;
+    background-image:url('https://images.unsplash.com/photo-1738462578003-39961adc78b7?fm=jpg&q=80&w=2400&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center 38%;
+    background-repeat:no-repeat;
+    animation:bgZoom 40s ease-in-out infinite alternate;
+    filter:saturate(0.82) brightness(1.04);
+  }
+  @keyframes bgZoom{
+    0%{ transform:scale(1.02); background-position:center 34%; }
+    50%{ transform:scale(1.08); background-position:center 42%; }
+    100%{ transform:scale(1.03); background-position:center 30%; }
+  }
   .bg-photo{
     position:fixed;
     inset:0;
     z-index:0;
+    mix-blend-mode:soft-light;
     background:
-      radial-gradient(ellipse 60% 48% at 50% 34%,
-        rgba(255,255,255,0.95) 0%,
-        rgba(246,221,210,0.65) 22%,
-        rgba(232,206,186,0.42) 42%,
-        rgba(228,214,198,0.22) 60%,
-        rgba(255,255,255,0) 78%),
-      radial-gradient(ellipse 48% 38% at 16% 14%, rgba(205,222,196,0.38) 0%, rgba(255,255,255,0) 70%),
-      radial-gradient(ellipse 50% 42% at 86% 18%, rgba(246,208,196,0.4) 0%, rgba(255,255,255,0) 70%),
-      radial-gradient(ellipse 72% 46% at 50% 100%, rgba(232,206,186,0.5) 0%, rgba(255,255,255,0) 62%),
+      radial-gradient(ellipse 65% 50% at 50% 30%,
+        rgba(255,254,252,0.95) 0%,
+        rgba(246,221,210,0.7) 24%,
+        rgba(232,206,186,0.48) 44%,
+        rgba(228,214,198,0.24) 62%,
+        rgba(255,255,255,0) 80%),
+      radial-gradient(ellipse 50% 40% at 14% 12%, rgba(205,222,196,0.42) 0%, rgba(255,255,255,0) 70%),
+      radial-gradient(ellipse 52% 44% at 88% 16%, rgba(246,198,196,0.46) 0%, rgba(255,255,255,0) 70%),
+      radial-gradient(ellipse 75% 48% at 50% 100%, rgba(232,206,186,0.58) 0%, rgba(255,255,255,0) 62%),
       var(--paper);
     background-size:200% 200%, 180% 180%, 180% 180%, 180% 180%, auto;
     background-repeat:no-repeat;
@@ -72,10 +89,10 @@
     z-index:0;
     background:
       linear-gradient(180deg,
-        rgba(255,255,255,0.08) 0%,
-        rgba(255,255,255,0.02) 28%,
-        rgba(255,255,255,0.02) 68%,
-        rgba(255,255,255,0.24) 100%);
+        rgba(255,254,250,0.38) 0%,
+        rgba(255,254,250,0.16) 26%,
+        rgba(255,254,250,0.22) 68%,
+        rgba(255,254,250,0.5) 100%);
   }
 
   .page{
@@ -555,6 +572,7 @@
 </head>
 <body>
 
+  <div class="bg-img"></div>
   <div class="bg-photo"></div>
   <div class="bg-veil"></div>
 
